@@ -12,4 +12,12 @@ export class LlamarPokemonService {
   llamarListaPokemon (){
     return this.http.get('http://pokeapi.co/api/v2/pokemon/');
   }
+  llamarImagenPokemon (idPokemon){
+    return this.http.get(`http://pokeapi.co/api/v2/pokemon/${idPokemon}`);
+  }
+
+  llamarImagenPokemonPorUrl (urlPokemon){
+    return this.http.get(urlPokemon);
+  }
+
 }

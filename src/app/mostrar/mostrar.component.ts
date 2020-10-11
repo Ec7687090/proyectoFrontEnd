@@ -16,15 +16,26 @@ export class MostrarComponent implements OnInit {
     this.llamarListaPokemon();
   }
 
-
   ngOnInit(): void {
   }
 
   llamarListaPokemon (){
-    this.llamarPokemonService.llamarListaPokemon();
-    (response)=>{
-      this.responseView = response;
-    }
+    console.log ('Paso 1');
+    this.llamarPokemonService.llamarListaPokemon().subscribe(
+      (response)=>{
+        console.log('response', response);
+        this.responseView = response;
+        this.llamarListaPokemon = response['results'];
+      }
+    );
+    console.log('paso 2');
+  }
 
+  abrirPokemos(){
+      this.llamarPokemonService.llamarImagenPokemonPorUrl(url).subscribe(
+        ( pokemon ) => {
+          console.log('pokemon', pokemon);
+        }
+      );    
   }
 }

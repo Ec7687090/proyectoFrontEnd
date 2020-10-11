@@ -1,7 +1,9 @@
-<br/>
-
-{{ responseView | json }}
-
 <div *ngFor="let pokemon of mostrarPokemon">
-    {{ pokemon }}
+    <h1>{{ pokemon.name }}</h1>
+    <button (click)="llamarImagenPokemonPorUrl">ABIR POKEMON</button>
+    <hr>
+</div>
+
+<div *ngif="responseView">
+    {{ responseView.count }}
 </div>

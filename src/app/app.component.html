@@ -1,27 +1,12 @@
-<div class="container">
-<<<<<<< HEAD
-  <h2>Bienvenido {{nombre}}</h2>
+<div class="container-fluid">
+  <div class="container">
+    <h1 class="title">{{ title }}</h1>
+  </div>
+  <div class="container">
+    <app-filtro></app-filtro>
+  </div>
+  <br>
+  <div class="container">
+    <app-mostrar></app-mostrar>
+  </div>
 </div>
-
-<div class="container">
-  <br/>
-  <h1>{{title}}</h1>
-  <input class="form-control" type="text" placeholder="Search..">
-</div>
-
-<app-mostrar></app-mostrar>
-
-<!-- <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myDIV *").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script> -->
-=======
-  <app-filtro></app-filtro>
-</div>
->>>>>>> origin/master

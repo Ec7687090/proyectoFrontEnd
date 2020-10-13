@@ -32,7 +32,7 @@ export class MostrarComponent implements OnInit {
   }
 
   abrirPokemos(){
-      this.llamarPokemonService.llamarImagenPokemonPorUrl(url).subscribe(
+      this.llamarPokemonService.llamarImagenPokemonPorUrl(URL).subscribe(
         ( pokemon ) => {
           console.log('pokemon', pokemon);
         }

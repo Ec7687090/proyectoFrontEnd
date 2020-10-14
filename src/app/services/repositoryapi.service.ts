@@ -20,7 +20,7 @@ export class RepositoryapiService {
       return this.http.post<T>(this.uri, obj, httpOptions);
     }
 
-    getData = <T> () => this.http.get<T>(this.uri);
+    getImage = <T> (pokemon:string) =>{return this.http.get<T>(environment.uri + pokemon).toPromise()};
 
     getDataById = <T> (id:any) => this.http.get<T>(this.uri + id);
 
